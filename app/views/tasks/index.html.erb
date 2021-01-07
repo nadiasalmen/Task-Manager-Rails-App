@@ -8,6 +8,9 @@
         <i class="far fa-square"></i>
       <% end %>
       <%= link_to task.title.capitalize, task_path(task) %>
+      <%= link_to task_path(task), method: :delete, data: { confirm: "Are you sure?" } do %>
+        <i class="far fa-trash-alt"></i>
+      <% end %>
     </p>
   <% end %>
   <div class="container border border-secondary my-3"></div>
