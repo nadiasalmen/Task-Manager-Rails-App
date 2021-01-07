@@ -1,5 +1,10 @@
 <div class="container">
-  <h1 class="my-3 font-weight-bolder text-info"><%= @task.title.capitalize %></h1>
+  <div class="d-flex justify-content-between align-items-center">
+    <h1 class="my-3 font-weight-bolder text-info"><%= @task.title.capitalize %></h1>
+    <%= link_to edit_task_path(@task), :class => "btn btn-secondary" do %>
+      <i class="far fa-edit"></i> Edit this task
+    <% end %>
+  </div>
   <p class="mb-0 text-secondary py-3 px-2 bg-light border border-secondary rounded"><%= @task.details %></p>
   <p class="mb-0 py-3 text-secondary">
     <% if @task.completed == true %>
