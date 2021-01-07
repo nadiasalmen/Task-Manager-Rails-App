@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="my-3 font-weight-bolder text-info"><%= @task.title.capitalize %></h1>
+  <p class="mb-0 text-secondary py-3 px-2 bg-light border border-secondary rounded"><%= @task.details %></p>
+  <p class="mb-0 py-3 text-secondary">
+    <% if @task.completed == true %>
+      <i class="far fa-check-square"></i> This task is completed!
+    <% else %>
+      <i class="far fa-square"></i> This task is not completed yet!
+    <% end %>
+  </p>
+  <%= link_to 'Back to list', tasks_path %>
+</div>

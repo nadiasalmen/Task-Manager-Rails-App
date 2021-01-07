@@ -7,8 +7,7 @@
       <% else %>
         <i class="far fa-square"></i>
       <% end %>
-      <%= task.title.capitalize %>
+      <%= link_to task.title.capitalize, task_path(task) %>
     </p>
   <% end %>
 </div>
-
