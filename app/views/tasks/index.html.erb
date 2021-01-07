@@ -10,4 +10,10 @@
       <%= link_to task.title.capitalize, task_path(task) %>
     </p>
   <% end %>
+  <div class="container border border-secondary my-3"></div>
+  <%= link_to tasks_new_path do %>
+    <i class="fas fa-plus"></i> Add a new task
+  <% end %>
+  <!-- another option to insert the icon into the rails link -->
+  <!-- <%= link_to '<i class="fas fa-plus"></i> Add a new task'.html_safe, tasks_new_path %> -->
 </div>
